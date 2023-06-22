@@ -1,0 +1,219 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+:root {
+    --main-color: #fd4646;
+    --text-color: #271e14;
+    --bg-color: rgb(245, 243, 243);
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.section-p1 {
+    padding: 40px 80px;
+}
+
+.section-p2 {
+    padding: 10px 80px;
+    margin-bottom: -90px;
+}
+.section-p3{
+    padding: 40px 0px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 50px;
+    height: 70px;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    left: 0;
+    /* background: white; */
+}
+
+.logo {
+    flex: 1;
+}
+
+.menu {
+    flex: 3;
+    display: flex;
+    position: relative;
+}
+
+.menu>li {
+    padding: 0 12px;
+    position: relative;
+}
+
+.menu>li:hover .sub-menu {
+    visibility: visible;
+    top: 50px;
+}
+
+.sub-menu {
+    position: absolute;
+    width: 150px;
+    border: 1px solid #ccc;
+    padding: 10px 0 10px 20px;
+    visibility: hidden;
+    top: 60px;
+    transition: 0.3s;
+}
+
+.sub-menu ul {
+    padding-left: 20px;
+}
+
+.sub-menu ul a {
+    font-weight: normal !important;
+    font-size: 18px !important;
+}
+
+.menu li a {
+    font-size: 18px;
+    font-weight: bold !important;
+    display: block;
+    line-height: 25px;
+}
+
+.others {
+    flex: 1;
+    display: flex;
+}
+
+.others>li {
+    padding: 0 12px;
+}
+
+.others>li:first-child {
+    position: relative;
+}
+
+.others>li:first-child input {
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid black;
+    background: transparent;
+}
+
+.others>li:first-child i {
+    position: absolute;
+    right: 10px;
+}
+#footer{
+    border-top: 2px solid black;
+}
+.footer-top {
+    width: 25%;
+}
+
+.footer-left {
+    width: 16%;
+}
+
+.footer-right {
+    width: 25%;
+}
+
+.footer-content {
+    width: 10%;
+}
+
+.footer-container {
+    width: 24%;
+}
+
+#footer ul li {
+    padding: 10px 0px;
+}
+
+#footer ul li span {
+    color: #000;
+    font-weight: 700;
+}
+
+.footer-top img {
+    width: 97px;
+}
+
+.footer-top .icon i {
+    color: var(--clr);
+    font-size: 2rem;
+    margin-right: 30px;
+    padding: 20px 0px;
+    cursor: pointer;
+}
+
+.footer-top button {
+    background: black;
+    color: white;
+    padding: 20px 20px;
+    border-radius: 30px 0px;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+#footer h3 {
+    font-size: 1.5rem;
+}
+
+.footer-container-top {
+    border: 5px solid rgba(210, 186, 186, 0.373);
+    padding: 20px 20px;
+    border-radius: 50px 0px;
+}
+.footer-container-top p{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.footer-container-top-right input{
+    border: none;
+    border-bottom: 1px solid rgb(162, 143, 143);
+    padding: 9px 0px;
+}
+.footer-container-top-right button{
+    border-radius: 20px 0px;
+    padding: 10px 10px;
+    cursor: pointer;
+    background: white;
+    font-size: 0.7rem;
+    transition: 0.5s ;
+    font-size: 16px;
+    border: 1px solid black;
+}
+.footer-container-top-right button:hover{
+    background: black;
+    color: white;
+
+}
+.footer-container-right{
+    padding: 20px 0px;
+}
+.footer-container-right h3{
+    padding: 20px 0px;
+}
+.footer-container-botthom p{
+    text-align: center;
+    border-top: 2px solid black;
+    padding: 30px;
+}

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+
+    <title>Quản lý sản phẩm nam</title>
+    <link href="css/styles-admin.css" rel="stylesheet" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet"
+        crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous">
+    </script>
+</head>
+
+<body class="sb-nav-fixed">
+    <div id="layoutSidenav_content">
+        <div class="product">
+            <div class="tittle text-center" style="padding: 20px; color: red; font-weight: 900; font-size: 50px;">Quản
+                Lý sản phẩm</div>
+            <button class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                <i class="fas fa-plus mr-2"></i>Create</button>
+            <table class="table">
+                <thead class="bg-danger text-center ">
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Img</th>
+                        <th>Price</th>
+                        <th>Giảm giá</th>
+                        <th>Action</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody class="text-center" id="product-admin">
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Thêm sản phẩm</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="" class="form-row">
+                        <div class="col-12 mt-3">
+                            <input class="form-control" type="text" id="name" placeholder="name">
+                        </div>
+                        <div class="col-12 mt-3">
+                            <input class="form-control" type="text" id="img" placeholder="img">
+                        </div>
+                        <div class="col-12 mt-3">
+                            <input class="form-control" type="number" id="price" placeholder="giá">
+                        </div>
+                        <div class="col-12 mt-3">
+                            <input class="form-control" type="number" id="pricea" placeholder="giảm giá">
+                        </div>
+                        <div class="col-12 mt-3">
+                            <input class="form-control" type="text" id="link" placeholder="đường dẫn">
+                        </div>
+                        <a class="btn btn-outline-danger mt-3" href="" onclick="addProduct()">Thêm</a>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Exit</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="updateProduct" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Cập nhật</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form class="form-row">
+                        <div class="col-12">
+                            <input class="form-control" type="text" id="idd" placeholder="id">
+                        </div>
+                        <div class="col-12 mt-3">
+                            <input class="form-control" type="text" id="named" placeholder="name">
+                        </div>
+                        <div class="col-12 mt-3">
+                            <input class="form-control" type="text" id="imgd" placeholder="img">
+                        </div>
+                        <div class="col-12 mt-3">
+                            <input class="form-control" type="number" id="priced" placeholder="giá">
+                        </div>  
+                        <div class="col-12 mt-3">
+                            <input class="form-control" type="number" id="pricex" placeholder="giảm giá">
+                        </div>
+                        <div class="col-12 mt-3">
+                            <input class="form-control" type="text" id="linkk" placeholder="đường dẫn">
+                        </div>
+                        <div id="submitUpdate">Cập nhật</div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" crossorigin="anonymous">
+</script>
+<script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
+<script src="assets/demo/datatables-demo.js"></script>
+<!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" crossorigin="anonymous">
+</script> -->
+<script src="js/scripts.js"></script>
+<script src="js/quanlysanpham.js"></script>
+
+</html>
+
+<!-- <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
+<script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script> -->
+<!-- <script src="assets/demo/datatables-demo.js"></script> -->
